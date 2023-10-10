@@ -1,0 +1,5 @@
+Light green background - #d9e8af
+beige background (alternative) - #fff2d9
+Light Grey - #f8f8fa
+Contact support background - #06c167
+Bottom strip grey - #f1f1f1
