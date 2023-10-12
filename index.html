@@ -1,22 +1,626 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Title</title>
-  <link rel="stylesheet" href="css/foundation-emails.css" />
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Uber Eats Transactional Email</title>
+    <!-- <link rel="stylesheet" href="style/style.css" /> -->
+    <style>
+      body {
+        margin: 0;
+      }
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 0;
+      }
+      th {
+        width: 100%;
+      }
+      img {
+        border: 0;
+      }
+      h3 {
+        font-family: sans-serif;
+        font-size: 28px;
+      }
+      h4 {
+        font-family: sans-serif;
+        font-size: 22px;
+      }
+      h5 {
+        font-size: 15px;
+      }
+      p {
+        margin: 0;
+        text-align: left;
+        font-size: 16px;
+      }
+      .button {
+        background-color: #4a4a4a;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      /* CONTAINER STYLES */
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #fff;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        padding-inline: 20px;
+      }
+      .main {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        font-family: sans-serif;
+        color: #000;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+      .column {
+        width: 50%;
+        max-width: 211px;
+        /* Original property for display is 'TABLE CELL' */
+        /* display: inline-block; */
+        vertical-align: top;
+      }
 
-<body>
-  <!-- <style> -->
-  <table class="body" data-made-with-foundation>
-    <tr>
-      <td class="float-center" align="center" valign="top">
-        <center>
-          
-        </center>
-      </td>
-    </tr>
-  </table>
-</body>
+      /* TWO COLUMN STYLES */
+      .two-columns {
+        font-size: 0;
+        text-align: center;
+      }
+      .two-columns .column {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .two-columns.last {
+        font-size: 0;
+        padding: 35px 0;
+      }
+      .two-columns .padding {
+        padding: 20px;
+      }
+      .two-columns .content {
+        text-align: left;
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      /* THREE COLUMN STYLES */
+      .three-columns {
+        font-size: 0;
+        padding: 35px 0 20px;
+      }
+      .three-columns .column {
+        width: 100%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .three-columns .padding {
+        padding: 25px;
+      }
+      .three-columns .content {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center class="wrapper">
+      <!-- MAIN CONTAINER: START -->
+      <table class="main">
+        <tr>
+          <td>
+            <!-- HEADER:START -->
+            <!-- MAIN HEADER CONTAINER -->
+            <table
+              style="
+                padding-top: 15px;
+                padding-bottom: 40px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 430px;
+                width: 100%;
+                margin-inline: auto;
+                background-color: #d9e8af;
+              "
+            >
+              <tr>
+                <!-- IMAGE CONTAINER -->
+                <th>
+                  <table style="margin-top: 25px">
+                    <tr>
+                      <th>
+                        <img
+                          src="https://res.cloudinary.com/ddeima5fc/image/upload/v1697036979/logo_ukhs8f.png"
+                          alt="Uber logo"
+                          style="width: 126px"
+                        />
+                      </th>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+              <!-- THANKS MESSAGE -->
+              <tr>
+                <th style="width: 100%">
+                  <h3 style="text-align: left; font-size: 36px">
+                    Thanks for ordering, Sam
+                  </h3>
+                </th>
+              </tr>
+              <!-- RECEIPT STATEMENT -->
+              <tr>
+                <th>
+                  <p style="text-align: left; font-size: 22px">
+                    Here's your receipt for McDonald's - Rashidiya
+                  </p>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <!-- IMAGE: SALAD -->
+                  <table style="margin-top: 35px">
+                    <tr>
+                      <th>
+                        <img
+                          src="https://res.cloudinary.com/ddeima5fc/image/upload/v1697036979/salad_qal6np.png"
+                          width="144"
+                          alt="Salad bowl illustration"
+                        />
+                      </th>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+            </table>
+            <!-- HEADER:END -->
+            <!-- ORDER SUMMARY CONTAINER: START -->
+            <table
+              style="
+                padding-top: 45px;
+                padding-bottom: 40px;
+                max-width: 430px;
+                width: 100%;
+                margin-inline: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+              "
+            >
+              <!-- 'TOTAL' CONTAINER: START -->
+              <tr>
+                <!-- TOTAL TEXT -->
+                <td class="column">
+                  <p style="font-size: 30px; margin-bottom: 25px">Total</p>
+                </td>
+                <!-- TOTAL AMT -->
+                <td class="column">
+                  <p style="font-size: 30px; text-align: right">AED 18.80</p>
+                </td>
+              </tr>
+              <!-- TOTAL CONTAINER: END -->
+              <!-- 'ITEMS' CONTAINER: START -->
+              <tr>
+                <td
+                  class="column"
+                  style="
+                    border-top: 1px solid #e2e2e2;
+                    border-bottom: 1px solid #e2e2e2;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  "
+                >
+                  <p>Big Tasty Double-Up</p>
+                </td>
+                <td
+                  class="column"
+                  style="
+                    border-top: 1px solid #e2e2e2;
+                    border-bottom: 1px solid #e2e2e2;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  "
+                >
+                  <p style="text-align: right">AED 31.00</p>
+                </td>
+              </tr>
+              <!-- 'ITEMS' CONTAINER: END -->
+              <!-- SUBTOTAL: START -->
+              <tr>
+                <td class="column"><p style="margin-top: 25px">Subtotal</p></td>
+                <td class="column">
+                  <p style="margin-top: 25px; text-align: right">AED 31.00</p>
+                </td>
+              </tr>
+              <!-- SUBTOTAL: END -->
+              <!-- TAX: START -->
+              <tr>
+                <td class="column"><p style="margin-top: 15px">Tax (5%)</p></td>
+                <td class="column">
+                  <p style="margin-top: 15px; text-align: right">AED 1.55</p>
+                </td>
+              </tr>
+              <!-- TAX: END -->
+              <!-- BAG FEE: START -->
+              <tr>
+                <td class="column"><p style="margin-top: 15px">Bag Fee</p></td>
+                <td class="column">
+                  <p style="margin-top: 15px; text-align: right">AED 1.25</p>
+                </td>
+              </tr>
+              <!-- BAG FEE: END -->
+              <!-- DISCOUNT: START -->
+              <tr>
+                <td
+                  class="column"
+                  style="border-bottom: 1px solid #e2e2e2; padding-bottom: 25px"
+                >
+                  <p style="margin-top: 15px">Promo Discount</p>
+                </td>
+                <td
+                  class="column"
+                  style="border-bottom: 1px solid #e2e2e2; padding-bottom: 25px"
+                >
+                  <p
+                    style="
+                      color: limegreen;
+                      margin-top: 15px;
+                      text-align: right;
+                    "
+                  >
+                    - AED 15.00
+                  </p>
+                </td>
+              </tr>
+              <!-- DISCOUNT: END -->
+              <!-- AMT CHARGED: START -->
+              <tr>
+                <td>
+                  <h5 style="text-align: left; margin-top: 35px">
+                    Amount Charged
+                  </h5>
+                </td>
+              </tr>
+              <!-- AMT CHARGED: END -->
+              <!-- 2 COLUMN AMT CHARGED CONTAINER:START -->
+              <tr>
+                <td class="column">
+                  <table>
+                    <tr>
+                      <td>
+                        <img
+                          src="https://res.cloudinary.com/ddeima5fc/image/upload/v1697036979/cash_bx4fip.png"
+                          alt="Money Icon"
+                          width="35"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="column">
+                  <p style="text-align: right">AED 18.80</p>
+                </td>
+              </tr>
+              <!-- 2 COLUMN AMT CHARGED CONTAINER:END -->
+              <!-- TEXT: Paid in Cash - START -->
+              <tr>
+                <td>
+                  <p style="margin-top: 5px">Paid in cash</p>
+                </td>
+              </tr>
+              <!-- TEXT: Paid in Cash - END -->
+              <!-- TEXT: Switch - START -->
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: limegreen;
+                      margin-top: 10px;
+                      margin-bottom: 35px;
+                    "
+                  >
+                    Switch
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Switch - END -->
+              <!-- TEXT: Trip Page - START -->
+              <tr>
+                <td colspan="2">
+                  <p style="font-size: 11.5px; line-height: 1.45">
+                    <span style="color: limegreen; text-decoration: underline"
+                      >Visit the trip page </span
+                    >for more information, including invoices, where available.
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Trip Page - END -->
+            </table>
+            <!-- ORDER SUMMARY CONTAINER:END -->
+            <!-- ORDER DETAILS CONTAINER: START -->
+            <table
+              style="
+                padding-top: 35px;
+                padding-bottom: 35px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 430px;
+                margin-inline: auto;
+                background-color: #f8f8fa;
+              "
+            >
+              <!-- TEXT: You ordered: START -->
+              <tr>
+                <td>
+                  <h4 style="margin-block: 0; text-align: left">
+                    You ordered from McDonald's - Rashidiya
+                  </h4>
+                </td>
+              </tr>
+              <!-- TEXT: You ordered: END -->
+              <!-- TEXT: Picked up from: START -->
+              <tr>
+                <td>
+                  <h5 style="text-align: left; margin-bottom: 5px">
+                    Picked up from
+                  </h5>
+                </td>
+              </tr>
+              <!-- TEXT: Picked up from: END -->
+              <!-- TEXT: Full address: START -->
+              <tr>
+                <td>
+                  <p style="font-size: 15px; margin-bottom: 3px">
+                    Bin Soughat Center, Airport Road - Dubai
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Full Address: END -->
+              <!-- TEXT: Delivered to: START -->
+              <tr>
+                <td>
+                  <h5 style="text-align: left; margin-bottom: 5px">
+                    Delivered to
+                  </h5>
+                </td>
+              </tr>
+              <!-- TEXT: Delivered to: END -->
+              <!-- TEXT: Delivery Address: START -->
+              <tr>
+                <td>
+                  <p style="font-size: 15px; margin-bottom: 3px">
+                    Villa #02, Ba Saeed Villas, Opp. Shaan Darbar
+                  </p>
+                  <p style="font-size: 15px; margin-bottom: 3px">
+                    Rashidiya, Dubai
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Delivery Address: END -->
+              <!-- TEXT: Delivery person: START -->
+              <tr>
+                <td>
+                  <p style="margin-top: 35px; font-size: 15.5px">
+                    Delivered by Ryan Dcunha
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Delivery person: END -->
+            </table>
+            <!-- ORDER DETAILS CONTAINER: END -->
+            <!-- LINKS CONTAINER: START -->
+            <table
+              style="
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 600px;
+                width: 100%;
+                background-color: #06c167;
+              "
+            >
+              <tr>
+                <td>
+                  <p
+                    style="
+                      text-transform: uppercase;
+                      color: #fff;
+                      font-size: 13.5px;
+                      letter-spacing: 0.55px;
+                    "
+                  >
+                    contact support
+                  </p>
+                  <p
+                    style="
+                      text-transform: uppercase;
+                      color: #fff;
+                      margin-top: 15px;
+                      font-size: 13.5px;
+                      letter-spacing: 0.55px;
+                    "
+                  >
+                    my orders
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <!-- LINKS CONTAINER: END -->
+            <!-- FOOTER: START -->
+            <table
+              style="
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 600px;
+                width: 100%;
+                background-color: #000;
+              "
+            >
+              <!-- IMAGE: Logo container - START -->
+              <tr>
+                <td>
+                  <table
+                    style="
+                      margin-top: 35px;
+                      margin-bottom: 25px;
+                      padding-bottom: 26px;
+                      border-bottom: 1px solid #242424;
+                      width: 100%;
+                    "
+                  >
+                    <tr>
+                      <td style="text-align: left">
+                        <img
+                          width="72"
+                          src="https://res.cloudinary.com/ddeima5fc/image/upload/v1697036979/logo-white_oxorxb.png"
+                          alt="Uber logo in white color"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- IMAGE: Logo container - END -->
+              <tr>
+                <td>
+                  <p
+                    style="
+                      text-transform: uppercase;
+                      color: #fff;
+                      font-size: 14px;
+                      letter-spacing: 0.35px;
+                    "
+                  >
+                    faq
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #fff;
+                      font-size: 14px;
+                      letter-spacing: 0.35px;
+                      margin-top: 5px;
+                      margin-bottom: 30px;
+                    "
+                  >
+                    Forgotten password
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Uber Address - START -->
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #9d9da3;
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                      letter-spacing: 0.35px;
+                    "
+                  >
+                    Uber Technologies
+                  </p>
+                  <p
+                    style="
+                      color: #9d9da3;
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                      letter-spacing: 0.35px;
+                    "
+                  >
+                    1515 3rd Street
+                  </p>
+                  <p
+                    style="
+                      color: #9d9da3;
+                      font-size: 13px;
+                      margin-bottom: 30px;
+                      letter-spacing: 0.35px;
+                    "
+                  >
+                    San Francisco, CA 94158
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: Uber Address - END -->
+              <!-- TEXT: TERMS & PRIVACY - START -->
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #fff;
+                      font-size: 13px;
+                      margin-bottom: 7px;
+                      letter-spacing: 0.55px;
+                    "
+                  >
+                    Privacy
+                  </p>
+                  <p
+                    style="
+                      color: #fff;
+                      font-size: 13px;
+                      margin-bottom: 30px;
+                      letter-spacing: 0.55px;
+                    "
+                  >
+                    Terms
+                  </p>
+                </td>
+              </tr>
+              <!-- TEXT: TERMS & PRIVACY - END -->
+            </table>
+            <!-- FOOTER: END -->
+            <!-- DISCLAIMER: START -->
+            <table
+              style="
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 600px;
+                width: 100%;
+                margin-inline: auto;
+                background-color: #f1f1f1;
+              "
+            >
+              <tr>
+                <td>
+                  <p
+                    style="
+                      font-size: 13px;
+                      line-height: 1.45;
+                      letter-spacing: 0.35;
+                    "
+                  >
+                    This is not a tax invoice. This is a receipt for the amount
+                    collected on behalf of the restaurant.
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <!-- DISCLAIMER: END -->
+          </td>
+        </tr>
+      </table>
+      <!-- MAIN CONTAINER: END -->
+    </center>
+  </body>
 </html>

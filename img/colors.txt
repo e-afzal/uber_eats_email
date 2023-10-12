@@ -3,3 +3,6 @@ beige background (alternative) - #fff2d9
 Light Grey - #f8f8fa
 Contact support background - #06c167
 Bottom strip grey - #f1f1f1
+
+Possible fonts:
+UberMoveText, "Open sans", "Helvetica Neue", Helvetica, sans-serif
